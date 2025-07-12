@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>YummyShare</title>
+        <link rel="icon"href="logo.jpg">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                margin: 0;
+            }
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: whitesmoke;
+                padding: 20px 40px;
+                flex-wrap: wrap;
+            }
+            .logo h2 {
+                font-size: 24px;
+                margin: 0;
+                color: gray;
+            }
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-links li a {
+                text-decoration: none;
+                color: gray;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+            li,h2,ul{
+                display:inline;
+            }
+            ul{
+                margin-left:40%;
+            }
+            li{
+                color:gray;
+                cursor: pointer;
+                margin-right:50px;
+                list-style:none;
+                gap:50px;
+            }
+            li:hover{
+                color:rgb(81, 167, 81);
+            }
+            input{
+                padding:10px;
+                width:600px;
+                display:inline-block;
+            }
+            .para h1{
+                font-family:garamond;
+            }
+            .fo{
+                align-items: center;
+                display:flex;
+                justify-content:center;
+                flex-direction:column;
+                margin-top:30px;
+            }
+            form{
+                background-color:green;
+                padding:30px;
+                border-radius:10px;
+                box-shadow:0 0 10px rgba(0,0,0,0.1);
+            }
+            form input,form button{
+                display: block;
+                padding: 15px;
+                margin: 15px 0;
+                width: 300px;
+                border:1px solid #ccc;
+                box-sizing: border-box;
+                font-size: 14px;
+                border-radius:10px;
+            }
+            textarea{
+                border-radius: 10px;
+                font-size:14px;
+                padding:15px;
+                margin:15px 0;
+            }
+            form button{
+                background-color: rgb(81, 167, 81);
+                color:white;
+                border:none;
+                cursor:pointer;
+                font-weight:bold;
+                border-radius:10px;
+            }
+            form button:hover{
+                color:green
+            }
+            .info{
+                margin-top:30px;
+                font-size:15px;
+            }
+            .info p{
+                margin:10px 0;
+                display:flex;
+                align-items:center;
+            }
+            .info p::before{
+                content:'';
+                display:inline-block;
+                margin-right:10px;
+            }
+            footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: gray;
+        }
+            @keyframes fadeIn{
+                from{opacity:0; transform:translateY(20px);}
+                to{opacity:1; transform: translateY(0);}
+            }
+            .fade-in{
+                animation:fadeIn 1.2s ease-in-out forwards;
+            }
+        </style>
+    </head>
+    <body>
+        <body style="background-color:white;">
+        <div class="header">
+            <nav class="navbar">
+                <div class="logo">
+                <h2>Yummy</h2><h2 style="color:rgb(81, 167, 81);">Share</h2>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="recipe.html">Home</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="home.html">Recipes</a></li>
+                    <li><a href="contact.html">Create</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="para">
+            <h1 style="text-align: center; padding-top:40px;">Get In Touch With</h1>
+            <h1 style="text-align: center; color:green;">YummyShare</h1>
+        </div>
+        <div class="sho">
+            <p style="text-align: center; padding-top: 20px;">Have a dish everyone loves? Let the world taste it</p>
+            <p style="text-align: center;padding-top: 5px;">Share it with our community!</p>
+        </div>
+        <div class="fo">
+            <form class="fade-in">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Your Email">
+                <textarea id="feed" rows="6" cols="38" placeholder="Ingredients"></textarea>
+                <textarea id="feed" rows="6" cols="38" placeholder="Instructions"></textarea>
+                <button>Share Your Recipe</button>
+            </form>
+            <div class="info fade-in" style="animation-delay: 0.4s;">
+                <p><i class="fas fa-envelope">E-mail: contact@yummyshare.com</i></p>
+                <p><i class="fas fa-phone">Phone Number: +91 98765 43210</i></p>
+                <p><i class="fas fa-map-marker-alt">Location: Chennai,India</i></p>
+            </div>
+        </div>
+        <footer class="fade-in">
+    © 2025 YummyShare | Crafted with ❤️
+</footer>
+    </body>
+</html>

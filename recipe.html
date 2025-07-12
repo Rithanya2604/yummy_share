@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <title>YummyShare</title>
+        <link rel="icon"href="logo.jpg">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                margin: 0;
+            }
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: whitesmoke;
+                padding: 20px 40px;
+                flex-wrap: wrap;
+            }
+            .logo h2 {
+                font-size: 24px;
+                margin: 0;
+                color: gray;
+            }
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-links li a {
+                text-decoration: none;
+                color: gray;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+            li,h2,ul{
+                display:inline;
+            }
+            ul{
+                margin-left:40%;
+            }
+            li{
+                color:gray;
+                cursor: pointer;
+                margin-right:70px;
+                list-style:none;
+                gap:50px;
+            }
+            li:hover{
+                color:rgb(81, 167, 81);
+            }
+            input{
+                padding:10px;
+                width:600px;
+                display:inline-block;
+            }
+            .navbar-menu-toggle{
+                display:none;
+            }
+            @media screen and (max-width:600px){
+                .navbar-menu-toggle{
+                    display:block;
+                }
+            }
+            .main1,h1{
+                color:green;
+                padding: 40px 40px 10px 40px;
+                font-family:garamond;
+                margin:0px;
+            }
+            .main1,p{
+                color: gray;
+                padding:0 40px 40px 40px;
+                margin:0px;
+            }
+            button{
+                display: block;
+                padding: 8px;
+                margin: 40px;
+                width: 200px;
+                box-sizing: border-box;
+                color:white;
+                background-color: rgb(81, 167, 81);
+                border:none;
+                margin-top:10px;
+                font-size:12px;
+                font-family:verdana;
+                cursor:pointer;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                animation: float 2s ease-in-out infinite;
+            }
+            button:hover{
+                color:green;
+            }
+            button a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            button a:hover {
+                color: green;
+            }
+
+            .content{
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                padding:40px;
+                gap:30px;
+            }
+            .right-img{
+                width:300px;
+                height:auto;
+                border-radius: 10px;
+                object-fit:cover;
+                animation: slideRight 1s ease forwards;
+            }
+            .mo{
+                text-align:center;
+                font-weight:bold;
+                font-family:garamond;
+            }
+            .products{
+                text-align:center;
+            }
+            .box{
+                border-color:none;
+                border-width: 1px;
+                border-style:solid;
+                display:inline-block;
+                width:200px;
+                cursor:pointer;
+                justify-content: space-between;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+                animation: fadeInUp 1s ease-out forwards;
+            }
+            .box,p{
+                color:black;
+                padding:15px;
+            }
+            .box h3:hover{
+                color:green;
+            }
+            .awe{
+                text-align: center;
+                padding:15px;
+            }
+            .box1{
+                border-color:none;
+                border-width: 1px;
+                border-style:solid;
+                display:inline-block;
+                width:400px;
+                cursor:pointer;
+                justify-content: space-between;
+                margin:0 40px 40px 40px;
+                margin-top:50px;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+                flex: 0 0 300px;
+                border:1px solid #ccc;
+                border-radius:10px;
+                padding:15px;
+                background-color: #f9f9f9;
+                animation: fadeInUp 1s ease-out forwards;
+                opacity: 0;
+            }
+            footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: gray;
+            }
+            .review{
+                display: flex;
+                overflow-x: auto;
+                gap: 20px;
+                padding: 0px;
+                scroll-behavior: auto;
+            }
+            .review::-webkit-scrollbar{
+                display:none;
+            }
+            .fade-in-section{
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeInUp 1s ease-out forwards;
+            }
+            .fade-in-delay1{
+                animation-delay: 0.2s;
+            }
+            .fade-in-delay2{
+                animation-delay: 0.4s;
+            }
+            .fade-in-delay3{
+                animation-delay: 0.6s;
+            }
+            .fade-in-delay4{
+                animation-delay: 0.8s;
+            }
+            @keyframes fadeInUp{
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes slideInRight{
+                from{
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+                to{
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            @keyframes zoomIn{
+                0%{
+                    transform: scale(0.8);
+                    opacity: 0;
+                }
+                100%{
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            @keyframes float{
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50%{
+                    transform: translateY(-5px);
+                }
+            }
+        </style>
+    </head>
+    <body style="background-color:white;">
+        <div class="header">
+            <nav class="navbar">
+                <div class="logo">
+                <h2>Yummy</h2><h2 style="color:rgb(81, 167, 81);">Share</h2>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="recipe.html">Home</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="home.html">Recipes</a></li>
+                    <li><a href="contact.html">Create</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navbar-menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="main1 content">
+            <div style="flex: 1; flex-wrap: wrap;">
+            <h1 class="fade-in-section fade-in-delay1"style="flex-basis:25%">SIMPLE  AND<br>TASTY  RECIPES</h1>
+            <p class="fade-in-section fade-in-delay2">Looking for delicious meals without spending hours in the kitchen?<br>Our collection of simple and tasty recipes is perfect for beginners and food lovers alike.<br>With easy steps and everyday ingredients, you’ll be whipping up flavorful dishes in no time!</p>
+            <button><a href="home.html">Get Started </a></button>
+        </div>
+        <img src="pasta.jpeg" class="right-img">
+        </div>
+        <div class="mo">
+            <h2 style="color:green;" class="fade-in-section fade-in-delay1">OUR RECIPES</h2><br>
+            <p class="fade-in-section fade-in-delay2">Search 2 million recipes using keywords, 28 nutrients and 40 diet and health filters</p><br>
+        </div>
+        <div class="products">
+            <div class="box fade-in-section fade-in-delay1">
+                <img src="vegetable.jpg" width="175 px" height="175px">
+                <h3>Vegetable Salad</h3>
+                <p style="color:gray;">Perfect for a light meal or a refreshing side dish!</p>
+            </div>
+            <div class="box fade-in-section fade-in-delay2">
+                <img src="chicken.jpg" width="175px" height="175px"><br>
+                <h3>Chicken Briyani</h3>
+                <p style="color:gray;">Aromatic basmati rice layered with juicy, spiced chicken, slow-cooked to perfection.</p>
+            </div>
+            <div class="box fade-in-section fade-in-delay3">
+                <img src="paneer.jpg" width="175 px" height="175px">
+                <h3>Ramen</h3>
+                <p style="color:gray;">Savory noodles in rich Japanese broth.</p>
+            </div>
+        </div>
+        <br>
+        <div class="awe">
+            <h3 style="font-weight: bold; text-align: center;" class="fade-in-section fade-in-delay1">What Our Users Say</h3><br>
+            <h2 style="text-align: center; color: green;" class="fade-in-section fade-in-delay2">REVIEWS</h2><br>
+            <p class="fade-in-section fade-in-delay3">Hear what our users have to say about their YummyShare experience.</p><br>
+        </div>
+        <div class="review">
+            <div class="box1 fade-in-section fade-in-delay1">
+                <p>⭐️⭐️⭐️⭐️⭐️<br>“Super fresh and perfectly balanced! The crunch of the veggies with a light tangy dressing makes it a refreshing and healthy choice.”<br>👤 Meena R</p>
+            </div>
+            <div class="box1 fade-in-section fade-in-delay2">
+                <p>⭐️⭐️⭐️⭐️⭐️<br>“Aromatic, flavorful, and perfectly layered. The chicken was juicy and the rice full of spice and taste — absolutely loved it!”<br>👤 Sneha J</p>
+            </div>
+            <div class="box1 fade-in-section fade-in-delay3">
+                <p>⭐️⭐️⭐️⭐️⭐️<br>“Warm, comforting, and packed with umami flavor. The noodles were perfect, and the broth was rich and soul-soothing!”<br>👤 Rahul W.</p>
+            </div>
+            <div class="box1 fade-in-section fade-in-delay4">
+                <p>⭐️⭐️⭐️⭐️<br>“Soft, fluffy, and evenly cooked with that perfect buttery layer on top. It complemented the curry so well! I just wish it was served a little hotter for that extra freshness.”<br>👤 Ravi J</p>
+            </div>
+        </div>
+        <footer class="fade-in">
+    © 2025 YummyShare | Crafted with ❤️
+    </footer>
+    </body>
+</html>

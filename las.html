@@ -1,0 +1,210 @@
+<html>
+    <head>
+        <title>YummyShare</title>
+        <link rel="icon"href="logo.jpg">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                margin: 0;
+            }
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: whitesmoke;
+                padding: 20px 40px;
+                flex-wrap: wrap;
+            }
+            .logo h2 {
+                font-size: 24px;
+                margin: 0;
+                color: gray;
+            }
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-links li a {
+                text-decoration: none;
+                color: gray;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+            li,h2,ul{
+                display:inline;
+            }
+            ul{
+                margin-left:40%;
+            }
+            li{
+                color:gray;
+                cursor: pointer;
+                margin-right:70px;
+                list-style:none;
+                gap:50px;
+            }
+            li:hover{
+                color:rgb(81, 167, 81);
+            }
+            header {
+            background-color:white;
+            color: green;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: green;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            background-color:rgb(81, 167, 81);
+            border-left: 5px solid green;
+            padding: 10px 15px;
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: gray;
+        }
+        p{
+            padding-left:60px;
+        }
+        @keyframes fadeInUp {
+                0% { opacity: 0; transform: translateY(30px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+
+            @keyframes fadeDown {
+                0% { opacity: 0; transform: translateY(-30px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.03); }
+            }
+
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+
+            .fade-down {
+                animation: fadeDown 1s ease forwards;
+            }
+            .fade-in-up {
+                animation: fadeInUp 1s ease forwards;
+            }
+            .pulse-box {
+                animation: pulse 1.5s ease-in-out infinite;
+            }
+            .fade-in {
+                animation: fadeIn 1.2s ease forwards;
+            }
+
+            </style>
+            </head>
+            <body style="background-color:white;">
+        <div class="header">
+            <nav class="navbar">
+                <div class="logo">
+                <h2>Yummy</h2><h2 style="color:rgb(81, 167, 81)">Share</h2>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="recipe.html">Home</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="home.html">Recipes</a></li>
+                    <li><a href="contact.html">Create</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <header class="fade-down">
+    <h1>Classic Lasagna Recipe </h1>
+</header>
+
+<main>
+    <section class="fade-in-up">
+        <h2>Ingredients</h2>
+
+        <div class="highlight pulse-box"><strong>For the Meat Sauce:</strong></div>
+        <ol>
+            <p>2 tbsp olive oil</p><br>
+            <p>1 large onion, finely chopped</p><br>
+            <p>3–4 garlic cloves, minced</p><br>
+            <p>500g ground beef (or beef+pork)</p><br>
+            <p>400g canned tomatoes</p><br>
+            <p>2 tbsp tomato paste</p><br>
+            <p>1 tsp dried oregano</p><br>
+            <p>1 tsp dried basil</p><br>
+            <p>Salt and pepper to taste</p><br>
+            <p>Optional: pinch of sugar</p><br>
+        </ol>
+        <div class="highlight pulse-box"><strong>For the Cheese Filling:</strong></div>
+            <p>250g ricotta cheese</p><br>
+            <p>1 egg</p><br>
+            <p>½ cup grated Parmesan cheese</p><br>
+            <p>Salt and pepper</p><br>
+
+        <div class="highlight pulse-box"><strong>Others:</strong></div>
+        <ul>
+            <p>9–12 lasagna noodles (boiled or oven-ready)</p><br>
+            <p>2 cups shredded mozzarella cheese</p><br>
+            <p>Extra Parmesan for topping</p><br>
+            <p>Fresh basil (optional)</p><br>
+        </ul>
+    </section>
+
+    <section class="fade-in-up">
+        <div class="highlight pulse-box"><strong>Instructions:</strong></div>
+        <ol>
+            <p><strong>Prepare the Meat Sauce:</strong><br> Heat oil, sauté onions & garlic, add meat, cook. Add tomatoes, paste, herbs, salt. Simmer 20–25 mins.</p><br>
+            <p><strong>Prepare the Cheese Mixture:</strong><br> Mix ricotta, egg, Parmesan, salt, and pepper in a bowl.</p><br>
+            <p><strong>Cook the Noodles:</strong><br> Boil if not oven-ready. Drain and set aside.</p><br>
+            <p><strong>Assemble Lasagna:</strong><br> Layer sauce → noodles → ricotta → sauce → mozzarella. Repeat. Top with cheese.</p><br>
+            <p><strong>Bake:</strong> <br>Cover with foil and bake at 180°C (350°F) for 25 mins. Uncover and bake 15 more mins.</p><br>
+            <p><strong>Rest and Serve:</strong> <br>Let sit for 10 mins. Garnish with basil.</p><br>
+        </ol>
+    </section>
+</main>
+
+<footer class="fade-in">
+    © 2025 YummyShare | Crafted with ❤️
+</footer>
+
+</body>
+</html>
+
+            </body>
+            </html>

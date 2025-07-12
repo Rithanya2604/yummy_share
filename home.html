@@ -1,0 +1,309 @@
+<html>
+    <head>
+        <title>YummyShare</title>
+        <link rel="icon"href="logo.jpg">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                margin: 0;
+            }
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: whitesmoke;
+                padding: 20px 40px;
+                flex-wrap: wrap;
+            }
+            .logo h2 {
+                font-size: 24px;
+                margin: 0;
+                color: gray;
+            }
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-links li a {
+                text-decoration: none;
+                color: gray;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+            li,h2,ul{
+                display:inline;
+            }
+            ul{
+                margin-left:40%;
+            }
+            li{
+                color:gray;
+                cursor: pointer;
+                margin-right:70px;
+                list-style:none;
+                gap:50px;
+            }
+            li:hover{
+                color:rgb(81, 167, 81);
+            }
+            input{
+                padding:10px;
+                display:inline-block;
+                width:600px;
+            }
+            .searchbar{
+                text-align:center;
+                margin:25px;
+            }
+            .products{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap:20px;
+                padding:0 30px 30px;
+            }
+            .box{
+                border:1.5px solid green;
+                text-align: center;
+                background-color: white;
+                overflow:hidden;
+                transition:transform 0.2s ease;
+            }
+            .box img{
+                width:100%;
+                height:200px;
+                object-fit: cover;
+            }
+            .box p{
+                padding: 10px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .box:hover{
+                background-color:white;
+                color:green;
+                transform:scale(1.03);
+            }
+            .box p a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+
+            .box p a:hover {
+                color: green;
+            }
+            footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: gray;
+        }
+                @keyframes fadeInUp {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                .box {
+                    animation: fadeInUp 0.6s ease forwards;
+                    opacity: 0; /* Start hidden */
+                    animation-delay: calc(var(--i) * 0.1s);
+                }
+
+                /* Apply hover scale more smoothly */
+                .box:hover {
+                    background-color: white;
+                    color: green;
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2);
+                }
+
+                /* Fade-in section titles */
+                .rec h1 {
+                    animation: fadeInUp 0.8s ease;
+                    transition: color 0.3s ease;
+                }
+
+                /* On hover over h1, glow green */
+                .rec h1:hover {
+                    color: #00b300;
+                    text-shadow: 0 0 8px #00ff00;
+                }
+
+
+        </style>
+    </head>
+    <body style="background-color: white;">
+        <div class="header">
+            <nav class="navbar">
+                <div class="logo">
+                <h2>Yummy</h2><h2 style="color:rgb(81, 167, 81);">Share</h2>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="recipe.html">Home</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="home.html">Recipes</a></li>
+                    <li><a href="contact.html">Create</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="searchbar">
+            <input id="search" placeholder="Search">
+        </div>
+        <div class="rec">
+            <h1 style="color: green; font-family: garamond; padding-left:30px; padding-bottom: 30px;">Indian Cuisine</h1>
+        </div>
+        <div class="products" >
+            <div class="box"style="--i:0">
+                <img src="butter.jpg" width="150px;" height="150px;">
+                <p>Paneer Butter Masala</p>
+                </div>
+            <div class="box"style="--i:1">
+                <img src="palak.jpg" width="150px;" height="150px;">
+                <p>Palak Paneer</p>
+                </div>
+            <div class="box"style="--i:2">
+                    <img src="naan.jpg" width="150px;" height="150px;">
+                    <p>Butter Naan </p>
+                    </div>
+            <div class="box"style="--i:3">
+                    <img src="crab.jpg" width="150px;" height="150px;">
+                    <p>Crab Masala</p>
+                    </div>
+            <div class="box"style="--i:4">
+                    <img src="south.jpg" width="150px;" height="150px;">
+                    <p>South Indian Meals</p>
+                    </div>
+            <div class="box"style="--i:5">
+                    <img src="biryani.jpg" width="150px;" height="150px;">
+                    <p>Chicken Briyani</p>
+                    </div>
+            <div class="box"style="--i:6">
+                    <img src="badam.jpg" width="150px;" height="150px;">
+                    <p>Badam Halwa</p>
+                    </div>
+            <div class="box"style="--i:7">
+                    <img src="kheer.jpg" width="150px;" height="150px;">
+                    <p>Kheer</p>
+                    </div>
+            <div class="box"style="--i:8">
+                    <img src="paani.jpg" width="150px;" height="150px;">
+                    <p>Pani Puri</p>
+                    </div>
+            <div class="box"style="--i:9">
+                    <img src="aloo.jpg" width="150px;" height="150px;">
+                    <p>Aloo Tikki</p>
+                    </div>
+            <div class="box"style="--i:10">
+                    <img src="malai.jpg" width="150px;" height="150px;">
+                    <p>Chingri Malai Curry</p>
+                    </div>
+            <div class="box"style="--i:11">
+                    <img src="kadhi.jpg" width="150px;" height="150px;">
+                    <p>Kadhi Pakora</p>
+                    </div>
+            </div>
+        </div>
+        <div class="rec">
+            <h1 style="color: green; font-family: garamond; padding-left:30px; padding-bottom: 30px;">Italian Cuisine</h1>
+        </div>
+        <div class="products" >
+            <div class="box"style="--i:12">
+                <img src="pizz.jpg" width="150px;" height="150px;">
+                <p>Margherita Pizza</p>
+                </div>
+            <div class="box"style="--i:13">
+                <img src="pasta.jpg" width="150px;" height="150px;">
+                <p>Pasta Alfredo</p>
+                </div>
+            <div class="box"style="--i:14">
+                    <img src="la.jpg" width="150px;" height="150px;">
+                    <p class="box" style="text-decoration: none;"><a href="las.html">Lasagna</a></p>
+                    </div>
+            <div class="box"style="--i:15">
+                    <img src="mush.jpg" width="150px;" height="150px;">
+                    <p>Mushroom Risotto</p>
+                    </div>
+                    </div>
+        <div class="rec">
+            <h1 style="color: green; font-family: garamond; padding-left:30px; padding-bottom: 30px;">Japanese Cuisine</h1>
+        </div>
+        <div class="products" >
+            <div class="box" style="--i:16">
+                    <img src="sushi.jpg" width="150px;" height="150px;">
+                    <p>Sushi</p>
+                    </div>
+            <div class="box" style="--i:17">
+                    <img src="ramen.jpg" width="150px;" height="150px;">
+                    <p>Ramen</p>
+                    </div>
+            <div class="box" style="--i:18">
+                    <img src="temp.jpg" width="150px;" height="150px;">
+                    <p>Tempura</p>
+                    </div>
+            <div class="box"style="--i:19">
+                    <img src="tako.jpg" width="150px;" height="150px;">
+                    <p>Takoyaki</p>
+                    </div>
+                    </div>
+        <div class="rec">
+            <h1 style="color: green; font-family: garamond; padding-left:30px; padding-bottom: 30px;">Korean Cuisine</h1>
+        </div>
+        <div class="products" >
+            <div class="box"style="--i:20">
+                    <img src="kim.jpg" width="150px;" height="150px;">
+                    <p>Kimchi</p>
+                    </div>
+            <div class="box"style="--i:21">
+                    <img src="bib.jpg" width="150px;" height="150px;">
+                    <p>Bibimbap</p>
+                    </div>
+            <div class="box"style="--i:22">
+                    <img src="tteo.jpg" width="150px;" height="150px;">
+                    <p>Tteokbokki</p>
+                    </div>
+            <div class="box"style="--i:23">
+                    <img src="jap.jpg" width="150px;" height="150px;">
+                    <p>Japchae</p>
+                    </div>
+            </div>
+        </div>
+        <footer class="fade-in">
+    © 2025 YummyShare | Crafted with ❤️
+</footer>
+        <script>
+            var search=document.getElementById("search");
+            var productlist=document.querySelectorAll(".products .box");
+
+            search.addEventListener("keyup",function(event){
+                var enteredValue=event.target.value.toUpperCase();
+
+                for(var count=0; count<productlist.length;count++){
+                    var productname=productlist[count].querySelector("p").textContent;
+
+                    if(productname.toUpperCase().indexOf(enteredValue)<0){
+                        productlist[count].style.display="none";
+                    }else{
+                        productlist[count].style.display="block";
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

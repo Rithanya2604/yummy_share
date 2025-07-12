@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <title>YummyShare</title>
+        <link rel="icon"href="logo.jpg">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+                margin: 0;
+            }
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: whitesmoke;
+                padding: 20px 40px;
+                flex-wrap: wrap;
+            }
+            .logo h2 {
+                font-size: 24px;
+                margin: 0;
+                color: gray;
+            }
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-links li a {
+                text-decoration: none;
+                color: gray;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+            li,h2,ul{
+                display:inline;
+            }
+            ul{
+                margin-left:40%;
+            }
+            li{
+                color:gray;
+                cursor: pointer;
+                margin-right:50px;
+                list-style:none;
+                gap:50px;
+            }
+            li:hover{
+                color:rgb(81, 167, 81);
+            }
+            input{
+                padding:10px;
+                width:600px;
+                display:inline-block;
+            }
+            .blog-container{
+                width:80%;
+                margin:20px auto;
+                background-color:whitesmoke;
+                border:2px solid rgb(81, 167, 81);
+                border-radius:10px;
+                padding:20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                opacity:0;
+                transform: translateY(30px);
+                animation: fadeInUp 0.8s ease-out forwards;
+            }
+            .blog-title{
+                cursor:pointer;
+                padding:15px;
+                border-radius:10px;
+                font-size:20px;
+                color:green;
+                font-weight:bold;
+                text-align:center;
+                margin-bottom: 10px;
+            }
+            .blog-content{
+                max-height: 0;
+                overflow: hidden;
+                opacity:0;
+                transform: translateY(20px);
+                transition: max-height 0.8s ease, opacity 0.6s ease, transform 0.6s ease;
+            }
+            .blog-content img{
+                width:100%;
+                max-height:300px;
+                object-fit: cover;
+                border-radius: 10px;
+                margin-bottom:15px;
+            }
+            input[type="checkbox"]{
+                display:none;
+            }
+            input[type="checkbox"]:checked + label + .blog-content{
+                max-height: 1000px;
+                opacity:1;
+                transform: translateY(0);
+            }
+            footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: gray;
+        }
+            @keyframes fadeIn{
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            .fade-in-section {
+                opacity: 0;
+                transform: translateY(30px);
+                transition:all 0.6s ease-out;
+            }
+            @keyframes fadeInUp{
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+        <body style="background-color:white;">
+        <div class="header">
+            <nav class="navbar">
+                <div class="logo">
+                <h2>Yummy</h2><h2 style="color:rgb(81, 167, 81);">Share</h2>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="recipe.html">Home</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="home.html">Recipes</a></li>
+                    <li><a href="contact.html">Create</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="blog-container" style="animation-delay: 0.2s;">
+            <input type="checkbox" id="blog1">
+            <label for="blog1" class="blog-title">Pasta Like Never Before: 10 Delicious Facts You Probably Didn’t Know!</label>
+                <div class="blog-content">
+                    <img src="pasta.jpg">
+                    <p>Pasta is more than just a comfort food — it’s a dish with a rich and surprising history. Though we often associate it with Italy, pasta’s roots may trace back to ancient China, with the oldest known noodles found to be over 4,000 years old. Today, there are over 600 different shapes of pasta, each created to hold specific sauces and enhance the eating experience. Originally a luxury item only the wealthy could afford, pasta became widely popular after industrial production. Authentic Italian pasta is made from durum wheat, giving it a firm texture, especially when cooked al dente — which is not only tastier but also healthier. Pasta even has its own day of celebration on October 25th, known as World Pasta Day. From health-friendly versions like whole wheat and veggie pasta to Italy’s impressive average consumption of 25 kg per person annually, pasta continues to be a global favorite with endless variety and timeless appeal.</p>
+                </div>
+        </div>
+        <div class="blog-container" style="animation-delay: 0.4s;">
+            <input type="checkbox" id="blog2">
+            <label for="blog2" class="blog-title">Chocolate: A Sweet Journey Through History and Happiness</label>
+                <div class="blog-content">
+                    <img src="chocolate.jpg">
+                    <p>Chocolate — rich, comforting, and loved across the world — is more than just a treat; it’s a global obsession. Made from cacao beans that were once so valuable they were used as currency by the Aztecs, chocolate has evolved into a symbol of love, celebration, and comfort. Whether it's dark, milk, or white, every bite offers a taste of history and joy. It’s packed with mood-boosting compounds like serotonin and has even been linked to heart health when eaten in moderation. From silky truffles to warm brownies, chocolate is a dessert hero and a universal favorite that brings people together. It’s not just food — it’s an emotion, a reward, and sometimes, exactly what we need to lift our spirits.</p>
+                </div>
+        </div>
+        <div class="blog-container" style="animation-delay: 0.6s;">
+            <input type="checkbox" id="blog3">
+            <label for="blog3" class="blog-title">Biryani: India’s Flavorful Feast in One Pot</label>
+                <div class="blog-content">
+                    <img src="biryani.jpg">
+                    <p>Biryani is more than just rice and meat — it’s an emotion for Indians. Every region has its own twist, from Hyderabadi dum biryani to Kolkata-style or Kerala’s Malabar biryani. Layers of fragrant basmati rice, spiced meat, fried onions, mint, and saffron create a magical combination that’s cooked slow and served hot. Whether it’s a wedding or a Sunday treat, biryani brings families together — one aromatic spoon at a time.</p>
+                </div>
+        </div>
+        <div class="blog-container" style="animation-delay: 0.8s;">
+            <input type="checkbox" id="blog4">
+            <label for="blog4" class="blog-title">Fried Rice: China’s Everyday Comfort Food</label>
+                <div class="blog-content">
+                    <img src="fried.jpg">
+                    <p>Simple, fast, and full of flavor — Chinese fried rice is a global favorite. Originally made from leftover rice and tossed with veggies, egg, soy sauce, and sometimes meat, it reflects the heart of Chinese home cooking: no waste, full taste. Whether it's classic egg fried rice or spicy Schezwan versions, this dish is a delicious way to turn simple ingredients into something amazing.</p>
+                </div>
+        </div>
+        <div class="blog-container" style="animation-delay: 1s;">
+            <input type="checkbox" id="blog5">
+            <label for="blog5" class="blog-title">Sushi: Japan’s Art on a Plate</label>
+                <div class="blog-content">
+                    <img src="sushi.jpg">
+                    <p>Sushi is elegance in every bite — vinegared rice, fresh fish, seaweed, and simple garnishes come together with precision. But sushi isn’t just about raw fish; it’s about freshness, balance, and presentation. Whether you're having maki rolls, nigiri, or sashimi, each piece reflects the Japanese philosophy of minimalism and respect for ingredients. Eating sushi is like tasting the ocean with grace.</p>
+                </div>
+        </div>
+        <div class="blog-container" style="animation-delay: 1.2s;">
+            <input type="checkbox" id="blog6">
+            <label for="blog6" class="blog-title">Burger: America’s Iconic Bite</label>
+                <div class="blog-content">
+                    <img src="burger.jpg">
+                    <p>The burger is the soul of American fast food — soft buns, juicy patties, cheese, lettuce, sauces, and endless customization. What began as a humble sandwich became a worldwide symbol of comfort and convenience. From diner-style classics to gourmet versions with bacon and truffle mayo, the American burger adapts to all tastes while staying satisfyingly familiar.</p>
+                </div>
+        </div>
+        <div class="blog-container" style="animation-delay: 1.4s;">
+            <input type="checkbox" id="blog7">
+            <label for="blog7" class="blog-title">Pizza Margherita: Italy’s Perfect Simplicity</label>
+                <div class="blog-content">
+                    <img src="pizz.jpg">
+                    <p>Pizza Margherita, born in Naples, is a tribute to the Italian flag — red tomato, white mozzarella, and green basil. Baked in wood-fired ovens with a thin crust and rich flavor, it's proof that simple ingredients can create unforgettable taste. Every slice carries the charm of Italian street food and the warmth of sharing. It’s not just pizza, it’s tradition you can eat.</p>
+                </div>
+        </div>
+        <div class="blog-container" style="animation-delay: 1.6s;">
+            <input type="checkbox" id="blog8">
+            <label for="blog8" class="blog-title">Tacos: Mexico’s Flavor-Packed Street Delight</label>
+                <div class="blog-content">
+                    <img src="tacos.jpg">
+                    <p>Tacos are small in size but bursting with flavor. A soft or crispy tortilla holds juicy fillings like spicy chicken, beef, beans, or veggies — topped with salsa, lime, and fresh cilantro. Originating from the streets of Mexico, tacos are more than fast food; they’re a cultural experience. Every bite tells a story of bold spices, family traditions, and festive gatherings.</p>
+                </div>
+        </div>
+        <div class="blog-container" style="animation-delay: 1.8s;">
+            <input type="checkbox" id="blog9">
+            <label for="blog9" class="blog-title">Bibimbap: Korea’s Bowl of Balance</label>
+                <div class="blog-content">
+                    <img src="bib.jpg">
+                    <p>Bibimbap is a colorful Korean rice bowl topped with sautéed vegetables, gochujang (red chili paste), egg, and usually meat. Each ingredient is arranged neatly, representing harmony and health. When mixed together, it becomes a flavorful, satisfying dish that’s both comforting and energizing. Bibimbap is a beautiful example of how Korean cuisine combines taste, nutrition, and art.</p>
+                </div>
+        </div>
+        <div class="blog-container" style="animation-delay: 2s;">
+            <input type="checkbox" id="blog10">
+            <label for="blog10" class="blog-title">Pad Thai: Thailand’s Sweet-Savory Stir-Fry</label>
+                <div class="blog-content">
+                    <img src="thai.jpg">
+                    <p>Pad Thai is Thailand’s most loved noodle dish — sweet, savory, tangy, and a little nutty. Stir-fried rice noodles with eggs, tofu or shrimp, bean sprouts, and crushed peanuts come together in a tamarind-based sauce that’s truly addictive. Found everywhere from street stalls to fancy restaurants, Pad Thai captures the vibrant soul of Thai cooking in every slurpy bite.</p>
+                </div>
+        </div>
+        <footer class="fade-in">
+    © 2025 YummyShare | Crafted with ❤️
+</footer>
+    </body>
+</html>
